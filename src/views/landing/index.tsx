@@ -1,5 +1,5 @@
 import { styles } from '@/shared/utils/styles';
-import { NavBar } from './components';
+import { Hero, NavBar } from './components';
 
 const index = () => {
   return (
@@ -11,7 +11,9 @@ const index = () => {
       </div>
 
       <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth} ${styles.paddingX}`}>hero</div>
+        <div className={`${styles.boxWidth}`}>
+          <Hero />
+        </div>
       </div>
 
       <div className={`bg-primary ${styles.paddingX}  ${styles.flexStart}`}>
