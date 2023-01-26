@@ -2,6 +2,7 @@ import { close, menu } from '@/shared/assets/icons';
 import ImgLogoComponents from '@/shared/components/ImgLogoComponents/ImgLogoComponents';
 import { useState } from 'react';
 import { navLinks } from '../../constants';
+// import ToggleTheme from './ToggleTheme';
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,12 +11,12 @@ const NavBar = () => {
     <nav className="w-full flex py-6 justify-between items-center navbar">
       <ImgLogoComponents Logo="LogoCompleteBlueWhite" className="w-[260px]" />
 
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1 overflow-hidden">
         {navLinks.map((link, i) => (
           <li
             key={i}
             className={`font-poppins text-[16px] ${
-              i === navLinks.length - 1 ? 'mr-0' : 'mr-10'
+              i === navLinks.length - 1 ? 'mr-4' : 'mr-10'
             }`}
           >
             <a
@@ -26,6 +27,7 @@ const NavBar = () => {
             </a>
           </li>
         ))}
+        {/* <ToggleTheme /> */}
       </ul>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
