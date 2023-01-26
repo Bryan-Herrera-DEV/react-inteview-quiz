@@ -16,7 +16,7 @@ const NavBar = () => {
           <li
             key={i}
             className={`font-poppins text-[16px] ${
-              i === navLinks.length - 1 ? 'mr-0' : 'mr-10'
+              i === navLinks.length - 1 ? 'mr-4' : 'mr-10'
             }`}
           >
             <a
@@ -25,9 +25,11 @@ const NavBar = () => {
             >
               {link.name}
             </a>
+            
           </li>
         ))}
         <ToggleTheme />
+        
       </ul>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">

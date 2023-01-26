@@ -41,7 +41,6 @@ const ToggleTheme = () => {
   };
   return (
     <DarkModeSwitch
-        style={{ marginBottom: '2rem' }}
         checked={dark}
         onChange={toggleTheme}
         size={40}
