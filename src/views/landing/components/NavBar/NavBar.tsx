@@ -2,7 +2,7 @@ import { close, menu } from '@/shared/assets/icons';
 import ImgLogoComponents from '@/shared/components/ImgLogoComponents/ImgLogoComponents';
 import { useState } from 'react';
 import { navLinks } from '../../constants';
-import ToggleTheme from './ToggleTheme';
+// import ToggleTheme from './ToggleTheme';
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,11 +25,9 @@ const NavBar = () => {
             >
               {link.name}
             </a>
-            
           </li>
         ))}
-        <ToggleTheme />
-        
+        {/* <ToggleTheme /> */}
       </ul>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">

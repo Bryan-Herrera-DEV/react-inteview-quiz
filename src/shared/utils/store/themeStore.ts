@@ -1,6 +1,6 @@
 import create from "zustand"
 
-interface themeTypes{
+interface themeTypes {
   dark:boolean
   toggleTheme:()=> void
 }

@@ -1,7 +1,6 @@
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
-import { useStore } from '@/store/themeStore'
-
+import { useStore } from '@/shared/utils/store/themeStore';
 
 const ToggleTheme = () => {
   const { dark, toggleTheme } = useStore()
