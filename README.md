@@ -1,10 +1,11 @@
 # React Interview Quiz
 
-## Code quality badges
+## Code quality and Code Coverage badges
 
 <div align="center">
     <div align="left">
         <a href="https://www.codacy.com/gh/Bryan-Herrera-DEV/react-inteview-quiz/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Bryan-Herrera-DEV/react-inteview-quiz&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/17c7b0b6641146c8bf4a1dcc634983ad"/></a>
+        <a href="https://www.codacy.com/gh/Bryan-Herrera-DEV/react-inteview-quiz/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Bryan-Herrera-DEV/react-inteview-quiz&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/17c7b0b6641146c8bf4a1dcc634983ad"/></a>
     </div>
 </div>
 
