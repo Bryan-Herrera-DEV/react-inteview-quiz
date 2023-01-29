@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImgLogoComponents should render 1`] = `
+<div>
+  <img
+    alt="LogoCompleteBlueWhite"
+    class="test"
+  />
+</div>
+`;
