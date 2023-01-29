@@ -31,6 +31,6 @@ jobs:
           npm run test:coverage -- --passWithNoTests --roots=src --ci
       - name: 🌐 Enviando Reporte de Cobertura a Codacy
         uses: codacy/codacy-coverage-reporter-action@v1
-         with:
+        with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: ./coverage/lcov.info
