@@ -1,0 +1,36 @@
+name: Testing Proyect Up
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  build:
+    name: Estilo de código y pruebas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+          cache: npm
+
+      - name: 📦 Instalando Dependencias
+        run: npm ci
+
+      - name: 🧪 Corriendo Todos los Test
+        run: npm run test
+
+      - name: 💄 Estilo de codigo
+        run: npm run style
+
+      - name: 📝 Generando Reporte de Cobertura
+        run: npm run test:coverage
+      
+      - name: 🌐 Enviando Reporte de Cobertura a Codacy
+        uses: codacy/codacy-coverage-reporter-action@master
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: coverage/lcov.info
