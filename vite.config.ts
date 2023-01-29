@@ -22,5 +22,14 @@ export default ({ mode }) => {
       outDir: 'build',
       minify: true,
     },
+    resolve: {
+			alias: [
+				{
+					find: '@',
+					replacement: path.resolve(__dirname, 'src'),
+				},
+      ]
+    },
   });
+  
 };
