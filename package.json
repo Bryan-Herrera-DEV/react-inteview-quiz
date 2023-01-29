@@ -39,6 +39,12 @@
     "eslint-plugin-react": "^7.32.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^10.1.0",
+<<<<<<< HEAD
     "postcss-nested": "^6.0.0"
+=======
+    "postcss-nested": "^6.0.0",
+    "tailwindcss": "^3.2.4",
+    "vite": "^3.2.3"
+>>>>>>> b49c82ece555b7d18abfb36a8b661873c2d8652b
   }
 }
