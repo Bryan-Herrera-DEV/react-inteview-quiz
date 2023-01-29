@@ -29,8 +29,6 @@ jobs:
       - name: 📝 Generando Reporte de Cobertura y 🌐 Enviando Reporte de Cobertura a Codacy
         run: 
           npm run test:coverage -- --passWithNoTests --roots=src --ci
-      - uses: codacy/codacy-coverage-reporter-action@master
-        with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: coverage/clover.xml
+          export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
+          bash <(curl -Ls https://coverage.codacy.com/get.sh)
         
