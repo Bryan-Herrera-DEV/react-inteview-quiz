@@ -32,6 +32,7 @@ jobs:
           export CODACY_ORGANIZATION_PROVIDER=gh
           export CODACY_USERNAME=Bryan-Herrera-DEV
           export CODACY_PROJECT_NAME=react-inteview-quiz
+          export CODACY_API_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN_REPO_ACC }}
           export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
-          bash <(curl -Ls https://coverage.codacy.com/get.sh)
+          bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ./coverage/lcov.info
         
