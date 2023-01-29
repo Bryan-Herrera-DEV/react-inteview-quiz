@@ -10,11 +10,13 @@
     "test": "jest --no-cache",
     "test-changed": "jest --onlyChanged",
     "lint": "eslint . --ext .ts --ext .tsx",
-    "style": "npm run lint -- --fix"
+    "style": "npm run lint -- --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "^18.11.18",
     "eslint": "^8.32.0",
+    "husky": "^8.0.3",
     "jest": "^29.4.1",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
@@ -43,6 +45,7 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.1",
+    "husky": "^8.0.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^10.1.0",
     "postcss-nested": "^6.0.0",
