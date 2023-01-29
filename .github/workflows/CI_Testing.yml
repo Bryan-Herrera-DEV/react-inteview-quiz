@@ -1,0 +1,28 @@
+name: Testing Proyect
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    name: Estilo de código y pruebas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+          cache: npm
+
+      - name: 📦 Instalando Dependencias
+        run: npm ci
+
+      - name: 🧪 Corriendo Todos los Test
+        run: npm run test
+
+      - name: 💄 Estilo de codigo
+        run: npm run style

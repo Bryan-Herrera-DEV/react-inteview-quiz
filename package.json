@@ -6,23 +6,32 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest --no-cache",
+    "test:coverage": "jest --no-cache --coverage",
+    "test-changed": "jest --onlyChanged",
+    "lint": "eslint . --ext .ts --ext .tsx",
+    "style": "npm run lint -- --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "^18.11.18",
+    "eslint": "^8.32.0",
+    "husky": "^8.0.3",
+    "jest": "^29.4.1",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.7.0",
     "react-toggle-dark-mode": "^1.1.1",
-    "tailwindcss": "^3.2.4",
     "sass": "^1.57.1",
-    "zustand": "^4.3.2",
-    "vite": "^3.2.3",
-    "eslint": "^8.32.0",
-    "typescript": "^4.6.4"
+    "tailwindcss": "^3.2.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
   },
   "devDependencies": {
+    "@types/jest": "^29.4.0",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@types/react-router-dom": "^5.3.3",
@@ -30,20 +39,17 @@
     "@typescript-eslint/parser": "^5.48.2",
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.13",
+    "babel-jest": "^29.4.1",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard-with-typescript": "^31.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.1",
+    "husky": "^8.0.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^10.1.0",
-<<<<<<< HEAD
-    "postcss-nested": "^6.0.0"
-=======
     "postcss-nested": "^6.0.0",
-    "tailwindcss": "^3.2.4",
-    "vite": "^3.2.3"
->>>>>>> b49c82ece555b7d18abfb36a8b661873c2d8652b
+    "ts-jest": "^29.0.5"
   }
 }
