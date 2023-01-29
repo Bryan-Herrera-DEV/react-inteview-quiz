@@ -10,7 +10,7 @@
     "test": "jest --no-cache",
     "test:coverage": "jest --no-cache --coverage",
     "test-changed": "jest --onlyChanged",
-    "lint": "eslint . --ext .ts --ext .tsx",
+    "lint": "eslint --ext .ts --ext .tsx",
     "style": "npm run lint -- --fix",
     "prepare": "husky install"
   },
