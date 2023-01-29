@@ -26,13 +26,11 @@ jobs:
       - name: 💄 Estilo de codigo
         run: npm run style
 
-      - name: 📝 Generando Reporte de Cobertura y 🌐 Enviando Reporte de Cobertura a Codacy
+      - name: 📝 Generando Reporte de Cobertura
         run: 
           npm run test:coverage -- --passWithNoTests --roots=src --ci
-          export CODACY_ORGANIZATION_PROVIDER=gh
-          export CODACY_USERNAME=Bryan-Herrera-DEV
-          export CODACY_PROJECT_NAME=react-inteview-quiz
-          export CODACY_API_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN_REPO_ACC }}
-          export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
-          bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ./coverage/lcov.info
-        
+      - name: 🌐 Enviando Reporte de Cobertura a Codacy
+        uses: codacy/codacy-coverage-reporter-action@v1
+         with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ./coverage/lcov.info
