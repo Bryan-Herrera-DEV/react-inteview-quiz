@@ -37,5 +37,5 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": ["vite.config.ts", "node_modules/"]
+  "ignorePatterns": ["vite.config.ts", "node_modules/", "jest.config.ts"]
 }
