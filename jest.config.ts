@@ -3,12 +3,17 @@ import type { Config } from "@jest/types";
 const config: Config.InitialOptions = {
   verbose: true,
   transform: {
-    "^.+\\.tsx?$": "ts-jest"
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   collectCoverageFrom: [
-    '**/*.{ts,tsx}',
+    'src/**/*.tsx', 
+    'src/**/*.ts',
     '!**/node_modules/**',
     '!**/tests/**',
   ],
+  collectCoverage: true,
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
+  roots: ['src'],
 };
 export default config;
+// roots: ['src', 'tests'],
