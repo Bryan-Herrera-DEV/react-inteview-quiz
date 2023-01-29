@@ -29,6 +29,9 @@ jobs:
       - name: 📝 Generando Reporte de Cobertura y 🌐 Enviando Reporte de Cobertura a Codacy
         run: 
           npm run test:coverage -- --passWithNoTests --roots=src --ci
+          export CODACY_ORGANIZATION_PROVIDER=gh
+          export CODACY_USERNAME=Bryan-Herrera-DEV
+          export CODACY_PROJECT_NAME=react-inteview-quiz
           export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
           bash <(curl -Ls https://coverage.codacy.com/get.sh)
         
