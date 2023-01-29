@@ -12,8 +12,7 @@ const config: Config.InitialOptions = {
     '!**/tests/**',
   ],
   collectCoverage: true,
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
-  roots: ['src'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'json']
 };
 export default config;
 // roots: ['src', 'tests'],

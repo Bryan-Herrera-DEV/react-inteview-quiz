@@ -21,13 +21,13 @@ jobs:
         run: npm ci
 
       - name: 🧪 Corriendo Todos los Test
-        run: npm run test
+        run: npm run test -- --roots=tests 
 
       - name: 💄 Estilo de codigo
         run: npm run style
 
       - name: 📝 Generando Reporte de Cobertura
-        run: npm run test:coverage -- --passWithNoTests
+        run: npm run test:coverage -- --passWithNoTests --roots=src
       
       - name: 🌐 Enviando Reporte de Cobertura a Codacy
         uses: codacy/codacy-coverage-reporter-action@master
